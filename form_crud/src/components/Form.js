@@ -1,14 +1,17 @@
 import React, { useState } from 'react'
+import axios from 'axios';
 import { Button, Checkbox, Form } from 'semantic-ui-react'
 
-export default function Signup_form() {
+export default function SignupForm() {
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
     const [checkbox, setCheckbox] = useState(false);
     const postData = () => {
-        console.log('firstname', firstName);
-        console.log('lastname', lastName);
-        console.log('checkbox', checkbox);
+        axios.post(`https://63decede3d94d02c0bb0ecfd.mockapi.io/user/mock-data`,{
+            firstName,
+            lastName,
+            checkbox
+        })
     }
     return (
         <div>
