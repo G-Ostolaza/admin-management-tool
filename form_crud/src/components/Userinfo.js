@@ -1,6 +1,17 @@
-import React from 'react';
+import axios from 'axios';
+import React, { useEffect, useState } from 'react';
 import { Table } from 'semantic-ui-react'
+
 export default function Read() {
+    const [APIData, setAPIData] = useState([]);
+    useEffect(() => {
+        axios.get(`https://63decede3d94d02c0bb0ecfd.mockapi.io/user/mock-data`)
+            .then((response) => {
+                console.log(response.data)
+                setAPIData(response.data);
+            })
+    }, []);
+
     return (
         <div className='main'>
             <Table singleLine>
@@ -13,11 +24,15 @@ export default function Read() {
                 </Table.Header>
 
                 <Table.Body>
-                    <Table.Row>
-                        <Table.Cell>Gabriel</Table.Cell>
-                        <Table.Cell>Osto</Table.Cell>
-                        <Table.Cell>Yes</Table.Cell>
-                    </Table.Row>
+                    {APIData.map((data) => {
+                        return(
+                            <Table.Row>
+                            <Table.Cell>{data.firstName}</Table.Cell>
+                            <Table.Cell>{data.lastName}</Table.Cell>
+                            <Table.Cell>{data.checkbox ? 'Checked':'Unchecked'}</Table.Cell>
+                        </Table.Row>
+                        )
+                    })}
                 </Table.Body>
             </Table>
         </div>
