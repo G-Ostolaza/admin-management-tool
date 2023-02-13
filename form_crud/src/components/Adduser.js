@@ -14,7 +14,7 @@ export default function SignupForm() {
         })
     }
     return (
-        <div>
+        <div className='main'>
             <Form className="signup">
                 <Form.Field>
                     <label>First Name</label>
