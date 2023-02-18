@@ -12,6 +12,8 @@ export default function SignupForm() {
             firstName,
             lastName,
             checkbox
+        }).then(()=>{
+            history.push/userinfo
         })
     }
     return (
