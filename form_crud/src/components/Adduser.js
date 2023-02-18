@@ -13,7 +13,7 @@ export default function SignupForm() {
             lastName,
             checkbox
         }).then(()=>{
-            history.push/userinfo
+            history.push('/userinfo')
         })
     }
     return (
