@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import axios from 'axios';
 import { Button, Checkbox, Form } from 'semantic-ui-react'
+import { useHistory } from 'react-router';
 
 export default function SignupForm() {
     const [firstName, setFirstName] = useState('');
