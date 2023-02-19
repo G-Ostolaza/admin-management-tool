@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import { Table } from 'semantic-ui-react'
+import { Table, Button } from 'semantic-ui-react'
+import { Link } from 'react-router-dom';
 
 export default function Read() {
     const [APIData, setAPIData] = useState([]);
@@ -11,6 +12,21 @@ export default function Read() {
                 setAPIData(response.data);
             })
     }, []);
+
+    const setData = (data) => {
+        let { id, firstName, lastName, checkbox } = data;
+        localStorage.setItem('ID', id);
+        localStorage.setItem('First Name', firstName);
+        localStorage.setItem('Last Name', lastName);
+        localStorage.setItem('Checkbox Value', checkbox)
+    }
+
+    const getData = () => {
+        axios.get(`https://63decede3d94d02c0bb0ecfd.mockapi.io/user/mock-data`)
+            .then((getData) => {
+                setAPIData(getData.data);
+            })
+    }
 
     return (
         <div className='main'>
