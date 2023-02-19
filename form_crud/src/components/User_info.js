@@ -28,6 +28,13 @@ export default function Read() {
             })
     }
 
+    const onDelete = (id) => {
+        axios.delete(`https://63decede3d94d02c0bb0ecfd.mockapi.io/user/mock-data/${id}`)
+        .then(() => {
+            getData();
+        })
+    }
+
     return (
         <div className='main'>
             <Table singleLine>
@@ -51,6 +58,9 @@ export default function Read() {
                                         <Button onClick={() => setData(data)}>Update</Button>
                                     </Table.Cell>
                                 </Link>
+                                <Table.Cell>
+                                    <Button onClick={() => onDelete(data.id)}>Delete</Button>
+                                </Table.Cell>
                             </Table.Row>
                         )
                     })}
