@@ -11,8 +11,8 @@ export default function Layout() {
         <Container>
           <Navbar.Brand href="/">Admin System</Navbar.Brand>
           <Nav className="me-auto">
+            <Nav.Link href="userinfo">User Information</Nav.Link>
             <Nav.Link href="adduser">Add User</Nav.Link>
-            <Nav.Link href="userinfo">User Database</Nav.Link>
             <Nav.Link href="update">Edit User</Nav.Link>
           </Nav>
         </Container>
