@@ -13,6 +13,7 @@ export default function Layout() {
           <Nav className="me-auto">
             <Nav.Link href="adduser">Add User</Nav.Link>
             <Nav.Link href="userinfo">User Database</Nav.Link>
+            <Nav.Link href="update">Edit User</Nav.Link>
           </Nav>
         </Container>
       </Navbar>

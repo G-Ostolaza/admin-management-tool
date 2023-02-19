@@ -1,8 +1,10 @@
 import React, { useState } from 'react'
 import axios from 'axios';
 import { Button, Checkbox, Form } from 'semantic-ui-react'
+import { useNavigate } from 'react-router-dom'
 
 export default function SignupForm() {
+    let navigate = useNavigate();
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
     const [checkbox, setCheckbox] = useState(false);
@@ -11,6 +13,9 @@ export default function SignupForm() {
             firstName,
             lastName,
             checkbox
+        })
+        .then(()=>{
+            navigate('/userinfo')
         })
     }
     return (
