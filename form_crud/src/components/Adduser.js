@@ -30,7 +30,7 @@ export default function SignupForm() {
                     <input placeholder="Last Name" onChange={(e) => setLastName(e.target.value)}/>
                 </Form.Field>
                 <Form.Field>
-                    <Checkbox label="I agree to the terms and Conditions" onChange={(e) =>setCheckbox(!checkbox)}/>
+                    <Checkbox label="Manger permissions" onChange={(e) =>setCheckbox(!checkbox)}/>
                 </Form.Field>
                 <Button onClick={postData} type="submit">Submit</Button>
             </Form>
