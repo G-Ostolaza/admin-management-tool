@@ -25,12 +25,17 @@ export default function Read() {
 
                 <Table.Body>
                     {APIData.map((data) => {
-                        return(
+                        return (
                             <Table.Row>
-                            <Table.Cell>{data.firstName}</Table.Cell>
-                            <Table.Cell>{data.lastName}</Table.Cell>
-                            <Table.Cell>{data.checkbox ? 'Checked':'Unchecked'}</Table.Cell>
-                        </Table.Row>
+                                <Table.Cell>{data.firstName}</Table.Cell>
+                                <Table.Cell>{data.lastName}</Table.Cell>
+                                <Table.Cell>{data.checkbox ? 'Checked' : 'Unchecked'}</Table.Cell>
+                                <Link to='/update'>
+                                    <Table.Cell>
+                                        <Button onClick={() => setData(data)}>Update</Button>
+                                    </Table.Cell>
+                                </Link>
+                            </Table.Row>
                         )
                     })}
                 </Table.Body>
