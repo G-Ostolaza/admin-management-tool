@@ -35,7 +35,7 @@ export default function Read() {
                     <Table.Row>
                         <Table.HeaderCell>First Name</Table.HeaderCell>
                         <Table.HeaderCell>Last Name</Table.HeaderCell>
-                        <Table.HeaderCell>Checked</Table.HeaderCell>
+                        <Table.HeaderCell>Manager Permissions</Table.HeaderCell>
                     </Table.Row>
                 </Table.Header>
 
