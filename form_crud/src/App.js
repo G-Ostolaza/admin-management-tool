@@ -6,6 +6,7 @@ import Home from './components/Home';
 import Layout from './components/Layout';
 import Adduser from './components/Adduser';
 import Userinfo from './components/Userinfo'
+import Update_user from './components/Update_user';
 import React from 'react';
 
 export default function App() {
