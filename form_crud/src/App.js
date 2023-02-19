@@ -17,6 +17,7 @@ export default function App() {
             <Route exact path="/" element={<Home />} />
             <Route path="/userinfo" element={<Userinfo />} />
             <Route path="/adduser" element={<Adduser />} />
+            <Route path="/update" element={<Update_user />} />
           </Routes>
         </BrowserRouter>
     </React.Fragment>
